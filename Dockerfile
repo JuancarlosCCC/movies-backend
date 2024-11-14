@@ -1,5 +1,6 @@
-FROM openjdk:23
-COPY ./out/artifacts/movies_jar/movies.jar /app/movies.jar
-WORKDIR /app
+FROM openjdk:23-jdk-slim
+COPY ./out/artifacts/movies_jar/movies.jar movies.jar
 ENTRYPOINT ["java", "-jar", "movies.jar"]
+
+
 
